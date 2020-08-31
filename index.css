@@ -1,0 +1,70 @@
+*, html, body, .main-section {
+    margin: 0;
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: auto;
+
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    background: #303030;
+    color: darkblue;
+} 
+
+/* Table Component */
+
+.table-section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.table-section .row {
+    width: 100%;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.table-section .dark span {
+    background-color: cornflowerblue;
+}
+
+.table-section .bright span {
+    background-color: cornsilk;
+}
+
+/* Row Component */
+.table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* .table-element + .row span combined to stretch width of table cells */
+.table-element {
+    display: flex;
+}
+
+.row span {
+    align-items: stretch;
+}
+
+.table-row span:nth-child(1) {
+    width: 25%;
+}
+
+.table-row span:nth-child(2) {
+    width: 35%;
+}
+
+.table-row span:nth-child(3) {
+    width: 20%;
+}
+
+.table-row span:nth-child(4) {
+    width: 15%;
+}
+
+
+

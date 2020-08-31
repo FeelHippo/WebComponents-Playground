@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <!-- body content -->
+    <table-component></table-component>
+
+    <!-- templates -->
+    <template id="row-component">
+        <link rel="stylesheet" href="index.css" />
+
+        <span class="table-row">
+            <span class="table-element">
+                <slot name="name"></slot>
+            </span>
+            <span class="table-element">
+                <slot name="email"></slot>
+            </span>
+            <span class="table-element">
+                <slot name="city"></slot>
+            </span>
+            <span class="table-element">
+                <slot name="website"></slot>
+            </span>
+        </span>
+    </template>
+    <script src="./components/row.js"></script>
+
+    <template id="table-component">
+        <link rel="stylesheet" href="index.css" />
+
+        <div class="main-section">
+            <input type="text" name="search" id="search-text" placeholder="name | email | city | website">
+            <div class="table-section">
+                <row-component class="row dark" id="row-0">
+                    <span slot="name">Name</span>
+                    <span slot="email">Email</span>
+                    <span slot="city">City</span>
+                    <span slot="website">Website</span>
+                </row-component>
+            </div>
+        </div>
+    </template>
+    <script src="./components/table.js"></script>
+</body>
+</html>
